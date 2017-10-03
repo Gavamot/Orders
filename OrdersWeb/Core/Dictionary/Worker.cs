@@ -14,17 +14,13 @@ namespace OrdersWeb.Model
         [Key]
         public int Id { get; set; }
 
-        public int UserId { get; set; }
+        public string UserId { get; set; }
         public ApplicationUser User { get; set; }
 
         [Required]
-        [StringLength(50)]
-        public string LastName { get; set; }
-        [Required]
-        [StringLength(50)]
-        public string FirstName { get; set; }
-        [StringLength(50)]
-        public string FatherName { get; set; }
+        [StringLength(256)]
+        public string Name { get; set; }
+       
         [StringLength(20)]
         public string Phone { get; set; }
         [Required]
@@ -34,13 +30,5 @@ namespace OrdersWeb.Model
         [Required]
         public int DepartmentId { get; set; }
         public Department Department { get; set; }
-
-        public override string ToString()
-        {
-            var res = $"{LastName} {FirstName[0]}.";
-            if (!string.IsNullOrEmpty(FatherName))
-                res += $" {FatherName[0]}.";
-            return res;
-        }
     }
 }

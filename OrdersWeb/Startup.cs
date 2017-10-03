@@ -8,9 +8,9 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using OrdersWeb.Data;
 using OrdersWeb.Models;
 using OrdersWeb.Services;
+using OrdersWeb.Data;
 
 namespace OrdersWeb
 {
